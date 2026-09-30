@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Request Help | ROADRESQ</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+            🚗 ROAD<span>RESQ</span>
+        </div>
+
+        <h2>Request Assistance 🆘</h2>
+
+        <p>
+            Tell us where you need help.
+        </p>
+
+
+        <div id="selectedService"
+             style="background:#fee2e2;padding:15px;border-radius:8px;margin-bottom:15px;">
+        </div>
+
+
+        <button
+            onclick="getLocation()"
+            class="primary-btn"
+            style="width:100%;border:none;cursor:pointer;">
+
+            📍 Share My Location
+
+        </button>
+
+
+        <p id="locationStatus"></p>
+
+
+        <button
+            onclick="sendRequest()"
+            class="emergency-btn"
+            style="width:100%;border:none;cursor:pointer;margin-top:15px;">
+
+            🚨 Request Assistance
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/location.js"></script>
+
+<script>
+
+const service =
+    localStorage.getItem("selectedService")
+    || "Emergency Assistance";
+
+document.getElementById(
+    "selectedService"
+).innerText =
+    "Selected Service: " + service;
+
+
+function sendRequest() {
+
+    if (!localStorage.getItem("userLocation")) {
+
+        alert("Please share your location first.");
+
+        return;
+    }
+
+    localStorage.setItem(
+        "requestStatus",
+        "Searching for nearby provider..."
+    );
+
+    window.location.href =
+        "tracking.html";
+
+}
+
+</script>
+
+</body>
+</html>
