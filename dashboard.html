@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | ROADRESQ</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🚗 ROAD<span>RESQ</span>
+    </div>
+
+    <a href="index.html" class="login-btn">
+        Logout
+    </a>
+
+</header>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <span>ROADRESQ DASHBOARD</span>
+
+        <h2>How can we help you?</h2>
+
+        <p>
+            Choose a service to request roadside assistance.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card"
+             onclick="selectService('Fuel Delivery')">
+
+            <div class="service-icon">⛽</div>
+
+            <h3>Fuel Delivery</h3>
+
+            <p>
+                Running out of fuel?
+            </p>
+
+        </div>
+
+
+        <div class="service-card"
+             onclick="selectService('Flat Tyre')">
+
+            <div class="service-icon">🛞</div>
+
+            <h3>Flat Tyre</h3>
+
+            <p>
+                Need puncture assistance?
+            </p>
+
+        </div>
+
+
+        <div class="service-card"
+             onclick="selectService('Battery Assistance')">
+
+            <div class="service-icon">🔋</div>
+
+            <h3>Battery Assistance</h3>
+
+            <p>
+                Battery dead?
+            </p>
+
+        </div>
+
+
+        <div class="service-card"
+             onclick="selectService('Vehicle Breakdown')">
+
+            <div class="service-icon">🔧</div>
+
+            <h3>Vehicle Breakdown</h3>
+
+            <p>
+                Need a mechanic?
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function selectService(service) {
+
+    localStorage.setItem(
+        "selectedService",
+        service
+    );
+
+    window.location.href =
+        "request-help.html";
+
+}
+
+</script>
+
+</body>
+</html>
