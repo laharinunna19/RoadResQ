@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Tracking | ROADRESQ</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <div class="auth-logo">
+            🚗 ROAD<span>RESQ</span>
+        </div>
+
+        <h2>Finding Assistance 🔎</h2>
+
+        <p>
+            We're looking for a nearby service provider.
+        </p>
+
+
+        <div style="
+            text-align:center;
+            font-size:55px;
+            margin:30px 0;
+        ">
+            🧑‍🔧
+        </div>
+
+
+        <div style="
+            background:#f3f4f6;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+        ">
+
+            <strong id="status">
+                Searching for nearby provider...
+            </strong>
+
+            <p style="margin-top:8px;">
+                📍 Location received
+            </p>
+
+        </div>
+
+
+        <button
+            onclick="simulateProvider()"
+            class="primary-btn"
+            style="width:100%;border:none;cursor:pointer;margin-top:20px;">
+
+            Simulate Provider Response
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function simulateProvider() {
+
+    document.getElementById("status").innerText =
+        "✅ Provider found! Help is on the way.";
+
+}
+
+</script>
+
+</body>
+</html>
